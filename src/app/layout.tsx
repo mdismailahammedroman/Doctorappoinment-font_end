@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Health-Care",
-  description: "A healthcare application built with Next.js",
+  title: "AI-Powered Healthcare - Find Your Perfect Doctor",
+  description:
+    "Discover top-rated doctors tailored to your needs with our AI-powered healthcare platform. Get personalized recommendations and book appointments effortlessly.",
 };
 
 export default function RootLayout({

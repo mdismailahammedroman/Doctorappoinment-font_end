@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
@@ -11,11 +13,12 @@ const PublicNavbar = () => {
     { href: "#", label: "Diagnostics" },
     { href: "#", label: "NGOs" },
   ];
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur  dark:bg-background/95">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur dark:bg-gray-900/95">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">PH Doc</span>
+          <span className="text-xl font-bold text-teal-600">Medly-Healthcare</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -23,7 +26,7 @@ const PublicNavbar = () => {
             <Link
               key={link.label}
               href={link.href}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-gray-700 hover:text-teal-600 dark:text-gray-200 dark:hover:text-teal-400 transition-colors"
             >
               {link.label}
             </Link>
@@ -32,12 +35,13 @@ const PublicNavbar = () => {
 
         <div className="hidden md:flex items-center space-x-2">
           <Link href="/login" className="text-lg font-medium">
-            <Button>Login</Button>
+            <Button variant="default" className="bg-teal-600 text-white hover:bg-teal-700">
+              Login
+            </Button>
           </Link>
         </div>
 
         {/* Mobile Menu */}
-
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -50,15 +54,14 @@ const PublicNavbar = () => {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-lg font-medium"
+                    className="text-lg font-medium text-gray-700 hover:text-teal-600 dark:text-gray-200 dark:hover:text-teal-400"
                   >
                     {link.label}
                   </Link>
                 ))}
                 <div className="border-t pt-4 flex flex-col space-y-4">
-                  <div className="flex justify-center"></div>
                   <Link href="/login" className="text-lg font-medium">
-                    <Button>Login</Button>
+                    <Button className="bg-teal-600 text-white hover:bg-teal-700">Login</Button>
                   </Link>
                 </div>
               </nav>
