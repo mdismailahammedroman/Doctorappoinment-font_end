@@ -1,3 +1,4 @@
+import Hero from "@/components/modules/Home/Hero";
 import Head from "next/head";
 
 
@@ -14,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>click me</h1>
+        <Hero/>
       </main>
     </>
   );
